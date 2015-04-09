@@ -16,7 +16,9 @@
 // @see https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html
 // @see https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ScriptableCocoaApplications/SApps_about_apps/SAppsAboutApps.html
 //
--(id) osaImage;
--(void) setOsaImage:(id)imgName;
+- (id)osaImage;
+- (void)setOsaImage:(id)imgName;
+- (id)osaText;
+- (void)setOsaText:(id)imgName;
 
 @end

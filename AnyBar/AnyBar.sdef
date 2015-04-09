@@ -18,6 +18,9 @@
             <property name="image name" code="Imgn" type="text" access="rw" description="The image's name for the indication.">
                 <cocoa key="osaImage"/>
             </property>
+            <property name="title" code="Titl" type="text" access="rw" description="The title for the indication.">
+                <cocoa key="osaText"/>
+            </property>
         </class>
         
         <!-- Application delegate -->
