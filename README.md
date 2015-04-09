@@ -1,18 +1,32 @@
-# AnyBar: OS X menubar status indicator
+# AnyBar+text: OS X menubar status indicator
 
-AnyBar is a small indicator for your menubar that does one simple thing: it displays color dot. What color means is up to you. When to change color is also up to you.
+This project is forked from <https://github.com/tonsky/AnyBar>. Modifications by Brett Terpstra, the original author bears no responsibility for problems I cause.
+
+> AnyBar is a small indicator for your menubar that does one simple thing: it displays color dot. What color means is up to you. When to change color is also up to you.
 
 <img src="AnyBar/Resources/screenshot.png?raw=true" />
 
+*Modifications in this fork:*
+
+This fork allows a few customizations, including the ability to set text and hide the colored status indicator.
+
+1. You can send a string to the UDP port that will set text to the right of the menu item.
+
+        echo -n "red This is the text" | /usr/bin/nc -4u -w0 localhost 1738
+
+    - if the first word of the string is a recognized color name, it will set the indicator color. f there is no color name provided, the color will not be changed
+    - The remainder of the string will be used to alter the text in the menu bar
+
+2. You can use "none" as the color name to remove the indicator
+3. The AppleScript dictionary has a new command for setting text
+    
+        tell application "AnyBar" to set title to "This is the text"
+
 ## Download
 
-Version 0.1.3:
+Version 0.1.3 + text:
 
-<a href="https://github.com/tonsky/AnyBar/releases/download/0.1.3/AnyBar-0.1.3.zip"><img src="AnyBar/Images.xcassets/AppIcon.appiconset/icon_128x128@2x.png?raw=true" style="width: 128px;" width=128/></a>
-
-Or using [Homebrew-cask](http://caskroom.io):
-
-    brew cask install anybar
+<a href="http://ckyp.us/1gBfC"><img src="AnyBar/Images.xcassets/AppIcon.appiconset/icon_128x128@2x.png?raw=true" style="width: 128px;" width=128/></a>
 
 ## Usage
 
