@@ -225,7 +225,7 @@
         NSArray *stringArray = [msg componentsSeparatedByString:@" "];
         if ([self setImage:stringArray[0]])
             stringArray = [stringArray subarrayWithRange:NSMakeRange(1, stringArray.count - 1)];
-        if (stringArray.count > 1)
+        if (stringArray.count > 0)
         {
             [self setText:[stringArray componentsJoinedByString:@" "]];
         }
